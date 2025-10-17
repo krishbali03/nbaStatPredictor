@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div>
-      <h1>NBA Stats Predictor</h1>
+      <h1>NBA Stat Predictor</h1>
       <form onSubmit={handleSubmit}>
         <input type="text" placeholder="Player Name" value={player} onChange={(e) => setPlayer(e.target.value)} />
         <label>

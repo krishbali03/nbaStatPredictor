@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
 import requests
+import math
 
 app = FastAPI()
 
@@ -37,6 +38,11 @@ def get_player_data(player_name):
 
 def calculate_probability(stats):
     return min(1.0, sum(stats.values()) / 100)
+
+def LSRL(stats):
+    return 0
+    #take input of players last 100 games (store their amount of games played use if they havent played 100)
+    #make LSRL using that info and predict probability based on what user inputs
 
 @app.get("/")
 def root():
